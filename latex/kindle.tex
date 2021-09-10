@@ -1,0 +1,55 @@
+%!TEX program=xelatex
+\documentclass[oneside,17pt]{memoir}
+
+\usepackage[]{ctex}
+\setmainfont{Times New Roman}
+\setCJKmainfont[AutoFakeSlant=0.3, AutoFakeBold = {1.17}]{KaiTi}
+
+\usepackage{booktabs,tabularx,makecell}
+\usepackage{siunitx}
+\usepackage{graphicx}
+
+%%% Kindle version
+\usepackage[
+  paperwidth=6in,
+  paperheight=9in,
+  top=2mm,
+  bottom=6mm,
+  left=3mm,
+  right=3mm,
+  nohead,
+  footskip=4mm,
+]{geometry}
+
+\pagestyle{plain}
+
+\usepackage[setpagesize=false]{hyperref}
+
+\usepackage{longtable}
+\usepackage{tabu}
+
+\newcommand{\pinyinzh}{\fontsize{24pt}{\baselineskip}\selectfont} % 三号,1.5倍行距
+\newcommand{\wenzizh}{\fontsize{64pt}{\baselineskip}\selectfont} % 三号,1.5倍行距 
+\newcommand{\zhushizh}{\fontsize{20pt}{\baselineskip}\selectfont} % 三号,1.5倍行距
+
+\title{\wenzizh 三字经}
+\author{\href{mailto:OuTlK@QQ.CoM}{OuTlK@QQ.CoM}}
+% \date{}
+
+\begin{document}
+
+\begin{titlingpage}
+\maketitle
+\end{titlingpage}
+
+\pagenumbering{Roman}
+
+\setcounter{page}{1}
+\pagenumbering{arabic}
+
+\begin{longtabu} to \textwidth {p{1.55cm}<{\centering}p{1.55cm}<{\centering}p{1.55cm}<{\centering}p{.1cm}p{1.55cm}<{\centering}p{1.55cm}<{\centering}p{1.55cm}<{\centering}p{1.55cm}<{\centering}}
+    \centering
+    \input{"../data/szj_wz.tex"}
+\end{longtabu}
+
+\end{document}
